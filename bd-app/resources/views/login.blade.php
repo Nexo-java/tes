@@ -11,7 +11,7 @@
         @csrf
         <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
         <div class="mb-4">
-              <label for="uname" class="block text-gray-700">Username</label>
+            <label for="uname" class="block text-gray-700">User</label>
               <input type="text" name="uname" id="uname" class="w-full px-3 py-2 border rounded" required autofocus>
         </div>
         <div class="mb-6">
