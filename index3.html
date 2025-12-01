@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+
+</head>
+<body>
+    <section class="mb-8 p-4 bg-white rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">A. display: block (Kelas :blok)</h2>
+        <p class="text-sm text-gray-600 mb-2"> Memenuhi 100%lebar yang tersedia, dan elemen berikutnya selalu memulai baris baru.</p>
+
+        <div class="border-2 border-dashed border-red-400 p-2">
+            <!-- Sintaks Tailwind: class="block"-->
+             <div class="box block bg-red-500" > BLOK 1</div>
+             <div class="box block bg-red-600">BLOK 2 </div>
+        </div>
+    </section>
+
+    <section class="mb-8 p-4 bg-white rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">B. Display : Inline (kelas: inline)</h2>
+        <p class="text-sm text-gray-600 mb-2">Hanya selebar konten, berjejer horizontal, Tidak bisa mengatur lebar/tinggi</p>
+
+        <div class="border-2 border-dashed border-blue-400 p-2"> 
+            <span class="box inline bg-blue-500">INLINE A</span>
+            <span class="box inline bg-blue-600">INLINE B</span>
+            <span class="box inline bg-blue-700">INLINE C</span>
+        </div>
+    </section>
+
+    <section class="mb-8 p-4 bg-white rounded-lg shadow-md">
+        <h2 class="text-xl font-semiblod mb-4 text-gray-700">C. display: Inline- bloc (kelas: Inline-block)</h2>
+        <p class="text-sm text-gray-600 mb-2">Berjajar horizontal, TAPI lebar dan tinggi dapat diatur</p>
+        <div class="border-2 border-dashed border-yellow-400 p-2">
+            <div class="box inline-block w-32 bg-yellow-500">I-BLOCK (W: 128PX)</div>
+            <div class="box inline-block w-40 bg-yellow-600">I-BLOCK (W: 160px)</div>
+        </div>
+    </section>
+
+    <h1 class="text-3xl font-bold mb-8 mt-12 text-gray-800 border-b pb-2 ">3.1 Visibility: Menyembunyikan Elemen</h1>
+    <section class="mb-8 p-4 bg-white rounded-lg shadow-md"> 
+       <h2 class="text-xl font-semiblod mb-4 text-gray-700">D. hidden vs. invisible</h2>
+        <p class="text-sm text-gray-600 mb-4"> Perhatikan elemen di tengah:</p> 
+        
+        <div class="border-2 border-dashed border-green-400 p-2 flex justify-around items-center">
+            <!-- Element 1: Terlihat-->
+            <div class="box bg-green-500 w-32"> Box Kiri</div>
+            <!--Elemen 2A: Hidden (display: none)-->
+            <!--Sintaks= Tailwind: class="hidden"-->
+            <div class=" box hidden w-32 bg-green-500">Box Hidden</div>
+            <!-- elemen 2B: Invisible (visibility: hidden)-->
+            <!--Sintaks= Tailwind: class="invisible"-->
+            <div class="box invisible w-32 bg-gray-400"> Box Invisibke</div>
+            <!--Elemen 3: Terlihat-->
+            <div class=" box bg-green-400 w-32"> Box kanan</div>
+        </div>
+        <p class="mt-4 text-sm font-medium text-gray-700">
+            Hasil: Di antara "Box kiri" dan "Box KANAN", Anda hanya akan melihat **ruang kosong** yang ditinggalkan oleh <span class="font-bold text-gray-800 ">Box Invisible</span>. Box HIDDEN hilang sepenuhnya tanpa bekasi
+        </p>
+    </section>
+    section
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+  .card-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 100px auto 0; /* top margin tetap, horizontal auto */
+    scroll-snap-type: x mandatory;
+    overflow: visible; /* biar dropdown bisa keluar grid */
+    justify-content: center; /* ini biar card di tengah */
+  }
+
+  .card-container::-webkit-scrollbar {
+    height: 10px;
+  }
+  .card-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+  }
+
+  .kantin-card {
+    flex: 0 20px auto;
+    width: 330px ;
+    border-radius: 8px;
+    background: linear-gradient(to top, #424141, #ffffff);
+    box-shadow: 0 4px 12px rgba(71, 71, 71, 0.15);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: visible;
+     z-index: 1;
+     padding-bottom:20px;
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+  }
+
+  .kantin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+
+  .kantin-card h3 {
+
+    background: #e9e2e2;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .kantin-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+
+  }
+
+  .manage-btn {
+    margin-top: auto;
+    margin-bottom: 3px;
+    padding: 15px 66px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #f1f1f1, #D4D4D4);
+    color: #111;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    transition: all 0.2s ease;
+    align-self: center; /* biar tetap di tengah */
+  }
+
+  .manage-btn:hover {
+    background: #cfcfcf;
+  }
+
+  .dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 180px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    z-index: 9999;
+    padding: 8px 0;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    border-radius: 6px;
+  }
+
+  .delete-btn { color: #c0392b; font-weight: 600; }
+
+  .add-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 28px;
+    background: #d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+  }
+
+  .add-btn:hover {
+    background: #c4c4c4;
+  }
