@@ -12,8 +12,8 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $siswa = Siswa::all();
-        return view ('listsiswa', compact('siswa'));
+      $siswa = siswa::all();
+      return view('siswa', compact('siswa'));
     }
 
     /**
@@ -21,7 +21,7 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        return view('inputsiswa');
+        return view ('inputsiswa');
     }
 
     /**
@@ -29,17 +29,15 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required|string|max:255',
-            'kelas' => 'required|string|max:50',
-            'jurusan' => 'required|string|max:255',
-        ]);
+       $request->validate([
+        'nama' => 'requiered|string|max:255',
+        'kelas' => 'requiered|string|max:255',
+        'jurusan' => 'requiered|string|max:255',
+       ]);
 
-        Siswa::create($request->all());
-
-        return redirect()->route('siswa.index')->with('success', 'Siswa berhasil ditambahkan.');
+       Siswa::create($request->all());
+       return redirect()->route ('siswa.index')->with('Success', 'Databerhasil ditambahkan ya nichh');
     }
-
     /**
      * Display the specified resource.
      */
